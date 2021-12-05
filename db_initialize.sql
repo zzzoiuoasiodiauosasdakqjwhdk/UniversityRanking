@@ -1,0 +1,20 @@
+CREATE TABLE "unv" (
+	"name"	TEXT NOT NULL UNIQUE,
+    "fee"	INTEGER,
+	"location"	TEXT,
+	"qs2022_rank"	TEXT,
+	"qs2022_sequence"	INTEGER,
+	"qs2021_rank"	TEXT,
+	"qs2021_sequence"	INTEGER,
+	"qs2020_rank"	TEXT,
+	"qs2020_sequence"	INTEGER,
+	"qs2019_rank"	TEXT,
+	"qs2019_sequence"	INTEGER,
+	"usn2022_rank"	TEXT,
+	"usn2022_sequence"	INTEGER,
+	"usnA&H_rank"	TEXT,
+	"usnA&H_sequence"	INTEGER,
+	"usnBio_rank"	TEXT,
+	"usnBio_sequence"	INTEGER,
+	PRIMARY KEY("name")
+);
