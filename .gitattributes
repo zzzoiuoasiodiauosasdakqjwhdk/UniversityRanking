@@ -1,5 +1,6 @@
-*.db linguist-language=sql
-*.sql linguist-language=sql
+*.db linguist-language=SQL
+*.sql linguist-language=SQL
+*.png linguist-language=SQL
 *.pxd linguist-language=python
 *.c linguist-language=python
 *.h linguist-language=python
