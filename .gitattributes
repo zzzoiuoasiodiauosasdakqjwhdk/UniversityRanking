@@ -1,2 +1,6 @@
-*.db linguist-language=database
-*.sql linguist-language=database
+*.db linguist-language=sql
+*.sql linguist-language=sql
+*.pxd linguist-language=python
+*.c linguist-language=python
+*.h linguist-language=python
+*.tex linguist-language=python
