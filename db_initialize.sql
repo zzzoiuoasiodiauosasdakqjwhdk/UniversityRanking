@@ -12,9 +12,13 @@ CREATE TABLE "unv" (
 	"qs2019_sequence"	INTEGER,
 	"usn2022_rank"	TEXT,
 	"usn2022_sequence"	INTEGER,
-	"usnA&H_rank"	TEXT,
-	"usnA&H_sequence"	INTEGER,
+	"usnAH_rank"	TEXT,
+	"usnAH_sequence"	INTEGER,
 	"usnBio_rank"	TEXT,
 	"usnBio_sequence"	INTEGER,
+	"rate_graduation"	FLOAT,
+	"rate_acceptance"	FLOAT,
+	"rate_international"	FLOAT,
+	"rate_retention"	FLOAT,
 	PRIMARY KEY("name")
 );
