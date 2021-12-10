@@ -1,16 +1,11 @@
 # -*- coding = utf-8 -*-
 # encoding: utf-8
 # @Time : 2021.12.3 11:26
-# @Author : Synthesis 杜品赫
+# @Author : https://github.com/SynFUN / https://github.com/SynthesisDu
 # @File : graph.py
 # @Software : PyCharm
-# https://github.com/SynthesisDu/MC_BadAppleDGDH
 
-import time
-import matplotlib
-from fchooser import *
 from pylab import *
-from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 import numpy as np
 import os
@@ -74,10 +69,6 @@ def itemXY_2D_XRankYRate(
     plt.bar(X + 0.50, Y[2], width=0.25, label=str(Y_lab[2]))
     plt.axhline(0, color='grey', linewidth=0.8)
     plt.legend()
-    # W = [0.10, 0.25, 0.50]  # 偏移量
-    # for i in range(3):
-    #     for a, b in zip(X + W[i], Y[i]):  # zip拆包
-    #         plt.text(a, b, "%.0f" % b, ha="center", va="bottom")  # 格式化字符串，保留0位小数
     plt.title(graph_title)
     plt.xlabel(XLabel)
     plt.ylabel(YLabel)
