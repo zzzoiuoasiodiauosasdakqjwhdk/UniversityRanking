@@ -40,6 +40,5 @@ def fileSaver(title: str, filetypes: list, defaultextension: str, initialfile: s
     :return: 保存的文件的路径 The saved file's path
     """
     tkinter.Tk().withdraw()
-    path = tkinter.filedialog.asksaveasfilename(title=title, filetypes=filetypes, defaultextension=defaultextension,
-                                                initialfile=initialfile)
+    path = tkinter.filedialog.asksaveasfilename(title=title, filetypes=filetypes, defaultextension=defaultextension, initialfile=initialfile)
     return path
