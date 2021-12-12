@@ -4,11 +4,15 @@
 # @Software : PyCharm
 # Python3.8
 
+import sys
+# database
 import sqlite3
+# other py files
 from html2data import *
 from data2graph import *
 from pathfinder import *
 
+# this is use for flexible input
 inp = {
     # normal char
     "a": 1, "A": 1, "b": 2, "B": 2, "c": 3, "C": 3, "d": 4, "D": 4,  "g": 7, "G": 7,
@@ -22,16 +26,24 @@ inp = {
     "T": 11, "t": 11, "Y": 11, "y": 11, "true": 11, "True": 11, "TRUE": 11, "1": 11
 }
 
+# the default database initial sql
 defaultSQL = """
 CREATE TABLE "unv" (
-	"name"	TEXT NOT NULL UNIQUE,
-    "fee"	INTEGER,
-	"location"	TEXT,
-	PRIMARY KEY("name")
+"name"	TEXT NOT NULL UNIQUE,
+"fee"	INTEGER,
+"location"	TEXT,
+PRIMARY KEY("name")
 );
 """
 
-def readSQL(sql_file_path):
+def readSQL(sql_file_path) -> bool:
+    """
+    Load a [.sql] file to database
+    :param sql_file_path: The [.sql] file path
+    :var con: Database connection
+    :var cur: Database connection cursor
+    :return: True / False
+    """
     try:
         with open(sql_file_path, 'r', encoding='utf-8') as file:
             sql = str(file.read())
@@ -45,7 +57,7 @@ def readSQL(sql_file_path):
         return False
 
 
-
+# The behavior tree
 if __name__ == '__main__':
     print("Initializing...")
     # 初始化Tk
@@ -168,7 +180,7 @@ if __name__ == '__main__':
                                         )
                                         time_end = time.time()
                                         if (time_end - time_start) >= 60: timeCost = (time_end - time_start) / 60
-                                        print('\nConvert done, ' + str(error) + ' errors happened, ' + 'cost ' + str(round(float(time_end - time_start), 3)) + "m\n")
+                                        print('\nConvert done, ' + str(error) + ' errors happened, ' + 'cost ' + str(round(float(time_end - time_start), 3)) + "s\n")
                                     if choose == 2:
                                         print("Converting USNews Rates...")
                                         print("+---------------------------------+")
@@ -187,7 +199,7 @@ if __name__ == '__main__':
                                         )
                                         time_end = time.time()
                                         if (time_end - time_start) >= 60: timeCost = (time_end - time_start) / 60
-                                        print('\nConvert done, ' + str(error) + ' errors happened, ' + 'cost ' + str(round(float(time_end - time_start), 3)) + "m\n")
+                                        print('\nConvert done, ' + str(error) + ' errors happened, ' + 'cost ' + str(round(float(time_end - time_start), 3)) + "s\n")
                                     if choose == 3:
                                         print("Converting QS Ranking...")
                                         print("+---------------------------------+")
@@ -208,7 +220,7 @@ if __name__ == '__main__':
                                         )
                                         time_end = time.time()
                                         if (time_end - time_start) >= 60: timeCost = (time_end - time_start) / 60
-                                        print('\nConvert done, ' + str(error) + ' errors happened, ' + 'cost ' + str(round(float(time_end - time_start), 3)) + "m\n")
+                                        print('\nConvert done, ' + str(error) + ' errors happened, ' + 'cost ' + str(round(float(time_end - time_start), 3)) + "s\n")
                                     elif choose == 5: break
                                     else: pass
                                 except FileNotFoundError as te:
@@ -261,7 +273,7 @@ if __name__ == '__main__':
                                         )
                                         time_end = time.time()
                                         if (time_end - time_start) >= 60: timeCost = (time_end - time_start) / 60
-                                        print('\nGenerate done, ' + str(error) + ' errors happened, ' + 'cost ' + str(round(float(time_end - time_start), 3)) + "m\n")
+                                        print('\nGenerate done, ' + str(error) + ' errors happened, ' + 'cost ' + str(round(float(time_end - time_start), 3)) + "s\n")
                                     if choose == 2:
                                         print("\nGenerate 3 Axis -PNG (Compare Graph)...")
                                         print("+---------------------------------+")
@@ -289,7 +301,7 @@ if __name__ == '__main__':
                                         )
                                         time_end = time.time()
                                         if (time_end - time_start) >= 60: timeCost = (time_end - time_start) / 60
-                                        print('\nGenerate done, ' + str(error) + ' errors happened, ' + 'cost ' + str(round(float(time_end - time_start), 3)) + "m\n")
+                                        print('\nGenerate done, ' + str(error) + ' errors happened, ' + 'cost ' + str(round(float(time_end - time_start), 3)) + "s\n")
                                     if choose == 3:
                                         print("\nGenerate 2 Axis -PNG (Disparity Graph)...")
                                         print("+---------------------------------+")
@@ -310,7 +322,7 @@ if __name__ == '__main__':
                                         )
                                         time_end = time.time()
                                         if (time_end - time_start) >= 60: timeCost = (time_end - time_start) / 60
-                                        print('\nGenerate done, ' + str(error) + ' errors happened, ' + 'cost ' + str(round(float(time_end - time_start), 3)) + "m\n")
+                                        print('\nGenerate done, ' + str(error) + ' errors happened, ' + 'cost ' + str(round(float(time_end - time_start), 3)) + "s\n")
                                     elif choose == 5: break
                                     else: pass
                                 except FileNotFoundError as te:
