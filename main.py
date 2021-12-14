@@ -154,7 +154,7 @@ if __name__ == '__main__':
                             print("a) USNews Ranking")
                             print("b) USNews Rates")
                             print("c) QS Ranking")
-                            print("e) Exit")
+                            print("e) Back")
                             inpC = str(input(">>> "))
                             if inpC in inp:
                                 choose = inp[inpC]
@@ -181,7 +181,7 @@ if __name__ == '__main__':
                                         time_end = time.time()
                                         if (time_end - time_start) >= 60: timeCost = (time_end - time_start) / 60
                                         print('\nConvert done, ' + str(error) + ' errors happened, ' + 'cost ' + str(round(float(time_end - time_start), 3)) + "s\n")
-                                    if choose == 2:
+                                    elif choose == 2:
                                         print("Converting USNews Rates...")
                                         print("+---------------------------------+")
                                         print("| Table structure:                |")
@@ -200,7 +200,7 @@ if __name__ == '__main__':
                                         time_end = time.time()
                                         if (time_end - time_start) >= 60: timeCost = (time_end - time_start) / 60
                                         print('\nConvert done, ' + str(error) + ' errors happened, ' + 'cost ' + str(round(float(time_end - time_start), 3)) + "s\n")
-                                    if choose == 3:
+                                    elif choose == 3:
                                         print("Converting QS Ranking...")
                                         print("+---------------------------------+")
                                         print("| Table structure:                |")
@@ -240,7 +240,7 @@ if __name__ == '__main__':
                             print("a) 3 Axis -GIF (Disparity Graph)")
                             print("b) 3 Axis -PNG (Compare Graph)")
                             print("c) 2 Axis -PNG (Disparity Graph)")
-                            print("e) Exit")
+                            print("e) Back")
                             inpC = str(input(">>> "))
                             if inpC in inp:
                                 choose = inp[inpC]
@@ -274,7 +274,7 @@ if __name__ == '__main__':
                                         time_end = time.time()
                                         if (time_end - time_start) >= 60: timeCost = (time_end - time_start) / 60
                                         print('\nGenerate done, ' + str(error) + ' errors happened, ' + 'cost ' + str(round(float(time_end - time_start), 3)) + "s\n")
-                                    if choose == 2:
+                                    elif choose == 2:
                                         print("\nGenerate 3 Axis -PNG (Compare Graph)...")
                                         print("+---------------------------------+")
                                         print("| Table structure:                |")
@@ -302,7 +302,7 @@ if __name__ == '__main__':
                                         time_end = time.time()
                                         if (time_end - time_start) >= 60: timeCost = (time_end - time_start) / 60
                                         print('\nGenerate done, ' + str(error) + ' errors happened, ' + 'cost ' + str(round(float(time_end - time_start), 3)) + "s\n")
-                                    if choose == 3:
+                                    elif choose == 3:
                                         print("\nGenerate 2 Axis -PNG (Disparity Graph)...")
                                         print("+---------------------------------+")
                                         print("| Table structure:                |")
